@@ -1,0 +1,36 @@
+APPEND模式下，写之前会先检查文件表项的文件状态字，
+若处于APPEND状态下，跳过文件表项的文件位移量，自动定位到文件末尾
+故此时lseek在写文件时不起作用
+
+总用量 970080
+drwxr-xr-x  24 root root      4096 9月   4 18:41 .
+drwxr-xr-x  24 root root      4096 9月   4 18:41 ..
+drwxr-xr-x   2 root root      4096 9月  17 17:45 bin
+drwxr-xr-x   3 root root      4096 9月  17 17:46 boot
+drwxrwxr-x   2 root root      4096 9月   4 16:01 cdrom
+drwxr-xr-x  18 root root      4260 9月  24 13:49 dev
+drwxr-xr-x 127 root root     12288 9月  24 13:46 etc
+drwxr-xr-x   3 root root      4096 9月   4 16:16 home
+lrwxrwxrwx   1 root root        32 9月   4 18:41 initrd.img -> boot/initrd.img-5.0.0-27-generic
+lrwxrwxrwx   1 root root        33 9月   4 15:57 initrd.img.old -> boot/initrd.img-4.18.0-15-generic
+drwxr-xr-x  22 root root      4096 9月  12 17:03 lib
+drwxr-xr-x   2 root root      4096 2月  10  2019 lib64
+drwx------   2 root root     16384 9月   4 15:57 lost+found
+drwxr-xr-x   3 root root      4096 9月   4 18:50 media
+drwxr-xr-x   3 root root      4096 9月   4 19:38 mnt
+drwxr-xr-x   4 root root      4096 9月   4 22:10 opt
+dr-xr-xr-x 300 root root         0 9月  24 13:49 proc
+drwx------   4 root root      4096 9月   4 19:34 root
+drwxr-xr-x  30 root root       860 9月  24 20:06 run
+drwxr-xr-x   2 root root     12288 9月  17 17:45 sbin
+drwxr-xr-x  12 root root      4096 9月  17 17:48 snap
+drwxr-xr-x   2 root root      4096 2月  10  2019 srv
+-rw-------   1 root root 993244160 9月   4 15:57 swapfile
+dr-xr-xr-x  13 root root         0 9月  24 13:49 sys
+drwxrwxrwt  19 root root      4096 9月  24 20:12 tmp
+drwxr-xr-x  11 root root      4096 9月   4 18:40 usr
+drwxr-xr-x  14 root root      4096 2月  10  2019 var
+lrwxrwxrwx   1 root root        29 9月   4 18:41 vmlinuz -> boot/vmlinuz-5.0.0-27-generic
+lrwxrwxrwx   1 root root        30 9月   4 18:41 vmlinuz.old -> boot/vmlinuz-4.18.0-15-generic
+970080
+drwxr-xr-x  2
