@@ -5,6 +5,7 @@
 void init(int* RandNum, int num)
 {
 	int i;
+	srand((unsigned)time(NULL));
 	for	(i=0;i<num;i++){
 	RandNum[i]=(int)(rand()%(1000+1));
 	}
