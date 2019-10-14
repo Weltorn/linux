@@ -1,5 +1,5 @@
 int max(int*, int);
 int sum(int*, int);
 
-int init(int*, int);
-int show(int*, int);
+void init(int*, int);
+void show(int*, int);

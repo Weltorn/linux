@@ -9,4 +9,5 @@ int main()
 	s = sum(a,5);
 	show(a,5);
 	printf("sum: %d, max: %d\n",s,m);
+	return 0;
 }
