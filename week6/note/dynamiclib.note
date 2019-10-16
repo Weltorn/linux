@@ -1,0 +1,39 @@
+1、动态库也是目标文件包
+2、动态库的创建
+gcc  aoprand.o base.o -shared -fPIC -o libdylib.so
+3、动态库存在两种链接方式
+	-|编译时链接
+	gcc -o localtest localtest.c ./libdylib.so
+	-|运行时链接
+	运行时链接要求代码显式地调用动态库，示例如下：
+#include<dlfcn.h>
+#include<stdlib.h>
+
+char* error;
+void *hd;
+void (*f1)();
+int (*f2)(),(*f3)();
+hd = dlopen(../dynamiclib/libdylib.so,RTLD_LAZY);
+if(!hd)
+{
+	fprintf(stderr,"%s\n",dlerror());
+	exit(1);
+}
+
+f1 = dlsym(hd,"show");
+if((error = dlerror())!=NULL)
+{
+	fprintf(stderr,"%s\n",dlerror());
+	exit(1);
+}
+
+
+//关闭库
+if(dlclose(hd)<0)
+{
+	fprintf(stderr,"%s\n",dlerror());
+	exit(1);
+}
+
+使用动态链接的编译方式：
+gcc -rdynamic -o remotetest1 remotetest1.c -ldl -I ../../dynamiclib

@@ -1,0 +1,7 @@
+1、静态库实际上是目标文件包
+2、静态库在编译时完成链接，包含在可执行文件中，此后的运行不再依赖该静态库
+
+3、创建静态库：
+ar -rc libmytest.a fun1.o fun2.o
+4、链接静态库：
+gcc main.c -o main -L libpath/ -l libname -I headpath/
