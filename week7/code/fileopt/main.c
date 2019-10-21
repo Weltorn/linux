@@ -21,8 +21,7 @@ int main()
 		switch(selection)
 		{
 			case 1:
-			{
-				fclose(currentFile);
+			{				
 				exit(0);
 				break;
 			}
@@ -88,7 +87,7 @@ int main()
 				if(filepath[strlen(filepath) - 1] == '\n')
 					filepath[strlen(filepath) - 1] = '\0' ;
 				printf("input file mode here: ");
-				fscanf(stdin,"%d",&mode);
+				fscanf(stdin,"%s",&mode);
 				fgetc(stdin);
 				if(chmod(filepath,mode) == -1)
 				{
@@ -108,7 +107,7 @@ int main()
 				 printf("stat error:%s\n",strerror(errno));
 				return -1;
 				}
-				printf("st_mode :%o\n",buf.st_mode);
+				printf("st_mode :%o\t",buf.st_mode);
  
 				if(S_ISREG(buf.st_mode))
 					printf("-");

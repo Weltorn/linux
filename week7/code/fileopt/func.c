@@ -11,7 +11,7 @@ int mainmenu()
 	printf("                               6.read file access authority\n");
 	printf("Please enter your choice:");
 	selection = getchar()-'0';
-	printf("%d\n",selection);
+
 	getchar();
 	return selection;
 }
