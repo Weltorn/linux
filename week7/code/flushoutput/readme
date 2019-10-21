@@ -1,0 +1,13 @@
+此例用于测试linuxIO的缓冲性质。
+测试函数：printf()，默认为行缓冲
+文件说明：
+output.c: 
+通过程序结束时，自动冲刷缓冲区
+output_1.c: 
+通过换行符，冲刷缓冲
+output_2.c: 
+通过填满缓冲区（1024字节），冲刷缓冲
+output_3.c: 
+通过关闭文件，冲刷缓冲
+output_4.c: 
+通过设置无缓冲，直接输出（setvbuf(stdout,NULL,_IONBF,0)）

@@ -4,18 +4,19 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <iostream>
-
+#include <string.h>
+using namespace std;
 int main()
 {
-	pid_t id;
+	pid_t fd;
 	FILE* file;
 	char* s="hello,world\n";
-	if(fd = open("test.txt",O_WRONLY|O_CTEAT,S_IRUSR|S_IWUSR)==-1)
+	if(fd = open("test.txt",O_WRONLY|O_CREAT,S_IRUSR|S_IWUSR)==-1)
 	{
 		cout<<"Error open file"<<endl;
 		return -1;
 	}
-	if(file = fopen("test2.txt","w+")==NULL)
+	if((file = fopen("test2.txt","w+"))==NULL)
 	{
 		cout<<"Error open file"<<endl;
 		return -1;
