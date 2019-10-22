@@ -14,6 +14,7 @@
 #include <langinfo.h>
 
 int mainmenu();
+unsigned inputMode();
 
 
 

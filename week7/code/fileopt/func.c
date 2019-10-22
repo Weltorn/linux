@@ -16,3 +16,29 @@ int mainmenu()
 	return selection;
 }
 
+unsigned inputMode()
+{
+	int i = 0;
+	char ch;
+	unsigned mode = 0, var = 0;
+	for (i = 3;i>=0;i--) 
+	{						
+		ch = fgetc(stdin);
+		if(ch == '\n')
+		{
+			printf("%d :get an enter\n",i);
+			i++;
+			continue;
+		}
+		var = ch-'0';
+		if(var>7||var<0)
+		{
+			printf("unleagle input\n");
+			exit(1);
+		}
+		mode += var<<(3*i);
+	}
+	return mode;
+}
+
+

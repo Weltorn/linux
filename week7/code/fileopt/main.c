@@ -86,8 +86,8 @@ int main()
 				fgets(filepath,1024,stdin);
 				if(filepath[strlen(filepath) - 1] == '\n')
 					filepath[strlen(filepath) - 1] = '\0' ;
-				printf("input file mode here: ");
-				fscanf(stdin,"%s",&mode);
+				printf("input file mode here: ");			
+				mode = inputMode();
 				fgetc(stdin);
 				if(chmod(filepath,mode) == -1)
 				{
