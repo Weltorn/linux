@@ -14,7 +14,7 @@ int main()
 
 	while(1)
 	{
-	//	system("cls");
+		//system("clear");
 	
 		selection = mainmenu();									
 		
@@ -31,7 +31,7 @@ int main()
 				fgets(filepath,1024,stdin);
 				if(filepath[strlen(filepath) - 1] == '\n')
 					filepath[strlen(filepath) - 1] = '\0' ;
-				printf("%s:%d\n",filepath,strlen(filepath));
+				//printf("%s:%d\n",filepath,strlen(filepath));
 				currentFile = fopen(filepath,"w");
 				if(currentFile == NULL)
 				{
@@ -51,7 +51,7 @@ int main()
 				{
 					printf("Open file error!\n");
 				}
-				printf("Input here£º\n");
+				printf("Input here: \n");
 				ch = fgetc(stdin);
 				 while (ch != '\n') 
 				 {
@@ -67,7 +67,7 @@ int main()
 				fgets(filepath,1024,stdin);
 				if(filepath[strlen(filepath) - 1] == '\n')
 					filepath[strlen(filepath) - 1] = '\0' ;
-				currentFile = fopen(filepath,"a+");
+				currentFile = fopen(filepath,"r");
 				if(currentFile == NULL)
 				{
 					printf("Open file error!\n");
