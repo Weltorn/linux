@@ -1,4 +1,12 @@
-#include "func.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+
 int mainmenu()
 {
 	int selection = 0;
@@ -11,9 +19,23 @@ int mainmenu()
 	printf("                               6.read file access authority\n");
 	printf("Please enter your choice:");
 	selection = getchar()-'0';
-
+	//printf("your choice: %d\n",selection);
 	getchar();
 	return selection;
+}
+
+int inputFileName(char* filepath)
+{
+	if(filepath == NULL)
+	{
+		printf("filepath is NULL");
+		return 1;
+	}
+	printf("input file name here: ");
+	fgets(filepath,1024,stdin);
+	if(filepath[strlen(filepath) - 1] == '\n')
+		filepath[strlen(filepath) - 1] = '\0' ;
+	return 0;
 }
 
 unsigned inputMode()

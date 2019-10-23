@@ -13,8 +13,20 @@
 #include <time.h>
 #include <langinfo.h>
 
+#define FILEPATHMAXLEN 20
+
 int mainmenu();
 unsigned inputMode();
+int inputFileName(char*);
+
+int createFile();
+int addToFile();
+int showFile();
+
+int changeFileMode();
+int showFileMode();
+
+
 
 
 
