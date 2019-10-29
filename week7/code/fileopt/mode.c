@@ -1,14 +1,14 @@
 #include "func.h"
-int changeFileMode()
+int changeFileMode_1()
 {
 	char *filepath = malloc(sizeof(char)*FILEPATHMAXLEN);
 	char ch;
 	unsigned mode;
 	FILE *currentFile = NULL;
-	inputFileName(filepath);
+	inputFileName_1(filepath);
 
 	printf("input file mode here: ");			
-				mode = inputMode();
+				mode = inputMode_1();
 				fgetc(stdin);
 				if(chmod(filepath,mode) == -1)
 				{
@@ -16,13 +16,13 @@ int changeFileMode()
 				}
 	free(filepath);
 }
-int showFileMode()
+int showFileMode_1()
 {
 	char *filepath = malloc(sizeof(char)*FILEPATHMAXLEN);
 	char ch;
 	struct stat buf;
 	FILE *currentFile = NULL;
-	inputFileName(filepath);
+	inputFileName_1(filepath);
 
 	if(lstat(filepath,&buf) == -1)
 				{

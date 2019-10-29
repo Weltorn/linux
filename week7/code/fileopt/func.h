@@ -15,16 +15,16 @@
 
 #define FILEPATHMAXLEN 20
 
-int mainmenu();
-unsigned inputMode();
-int inputFileName(char*);
+int mainmenu_1();
+unsigned inputMode_1();
+int inputFileName_1(char*);
 
-int createFile();
-int addToFile();
-int showFile();
+int createFile_1();
+int addToFile_1();
+int showFile_1();
 
-int changeFileMode();
-int showFileMode();
+int changeFileMode_1();
+int showFileMode_1();
 
 
 

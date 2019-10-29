@@ -1,10 +1,10 @@
 #include "func.h"
 
-int createFile()
+int createFile_1()
 {
 	char *filepath = malloc(sizeof(char)*FILEPATHMAXLEN);
 	FILE *currentFile = NULL;
-	inputFileName(filepath);
+	inputFileName_1(filepath);
 
 	currentFile = fopen(filepath,"w");
 	if(currentFile == NULL)
@@ -14,12 +14,12 @@ int createFile()
 	fclose(currentFile);
 	free(filepath);
 }
-int addToFile()
+int addToFile_1()
 {
 	char *filepath = malloc(sizeof(char)*FILEPATHMAXLEN);
 	char ch;
 	FILE *currentFile = NULL;
-	inputFileName(filepath);
+	inputFileName_1(filepath);
 
 	currentFile = fopen(filepath,"a+");
 				if(currentFile == NULL)
@@ -36,12 +36,12 @@ int addToFile()
 	fclose(currentFile);
 	free(filepath);
 }
-int showFile()
+int showFile_1()
 {
 	char *filepath = malloc(sizeof(char)*FILEPATHMAXLEN);
 	char ch;
 	FILE *currentFile = NULL;
-	inputFileName(filepath);
+	inputFileName_1(filepath);
 
 	currentFile = fopen(filepath,"r");
 				if(currentFile == NULL)

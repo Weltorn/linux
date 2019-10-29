@@ -9,7 +9,7 @@ int main()
 	{
 		//system("clear");
 	
-		selection = mainmenu();									
+		selection = mainmenu_1();									
 		
 		switch(selection)
 		{
@@ -20,33 +20,33 @@ int main()
 			}
 			case 2:
 			{			
-				createFile();//创建文件
+				createFile_1();//创建文件
 				
 				break;
 			}
 			case 3:
 			{
-				addToFile();//添加内容到文件
+				addToFile_1();//添加内容到文件
 				
 				break;
 			}
 			case 4:
 			{
-				showFile();//展示文件内容
+				showFile_1();//展示文件内容
 
 				break;
 			}
 			case 5:
 			{
 				
-				changeFileMode();//修改文件权限
+				changeFileMode_1();//修改文件权限
 				
 				break;
 			}
 			
 			case 6:
 			{		
-				showFileMode();//输出文件权限
+				showFileMode_1();//输出文件权限
 				break;
 			}
 			default:

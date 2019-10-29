@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 
-int mainmenu()
+int mainmenu_1()
 {
 	int selection = 0;
 	printf("                               MAIN MENU\n");
@@ -24,7 +24,7 @@ int mainmenu()
 	return selection;
 }
 
-int inputFileName(char* filepath)
+int inputFileName_1(char* filepath)
 {
 	if(filepath == NULL)
 	{
@@ -38,7 +38,7 @@ int inputFileName(char* filepath)
 	return 0;
 }
 
-unsigned inputMode()
+unsigned inputMode_1()
 {
 	int i = 0;
 	char ch;
