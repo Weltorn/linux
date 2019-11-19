@@ -32,7 +32,6 @@ int main()
 		printf("parent %d,parent is waiting zombie now!\n",getpid());
 		while((p = waitpid(pid1,&s,WNOHANG))!=-1 || (p = waitpid(pid2,&s,WNOHANG))!=-1 )
 		{
-			printf("parent pid=%d,parent exit now!\n",getpid());
 			if(WIFEXITED(s))
 			{			
 				printf("child %d is exiting normally code = %d\n",p,WEXITSTATUS(s));
@@ -47,6 +46,7 @@ int main()
 			}
 
 		}
+		printf("parent pid=%d,parent exit now!\n",getpid());
 		exit(0);		
 	}
 }
