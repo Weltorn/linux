@@ -30,7 +30,7 @@ int main()
 	else
 	{
 		printf("parent %d,parent is waiting zombie now!\n",getpid());
-		while((p = waitpid(pid1,&s,WNOHANG))!=-1)
+		while((p = waitpid(pid1,&s,WNOHANG))!=-1 || (p = waitpid(pid2,&s,WNOHANG))!=-1 )
 		{
 			printf("parent pid=%d,parent exit now!\n",getpid());
 			if(WIFEXITED(s))
