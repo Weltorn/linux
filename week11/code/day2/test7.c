@@ -13,7 +13,7 @@ int main()
 	int s;
 	char c;
 	char buf[255];
-	if((fp = fopen("test7.dat","a+")) ==NULL)
+	if((fp = fopen("test7.dat","w+")) ==NULL)
 	{
 		perror("failed to fopen\n");
 		return -1;
